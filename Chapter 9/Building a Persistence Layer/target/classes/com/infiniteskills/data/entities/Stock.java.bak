@@ -1,0 +1,51 @@
+package com.infiniteskills.data.entities;
+
+import java.math.BigDecimal;
+
+import javax.persistence.AttributeOverride;
+import javax.persistence.AttributeOverrides;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "STOCK")
+@AttributeOverrides({
+	@AttributeOverride(name="id", column=@Column(name="STOCK_ID")),
+	@AttributeOverride(name="name", column=@Column(name="BAHAHHA"))
+	
+})
+public class Stock extends Investment {
+
+	@Column(name = "SHARE_PRICE")
+	private BigDecimal sharePrice;
+
+	@Column(name = "QUANTITY")
+	private BigDecimal quantity;
+
+	public Long getStockId() {
+		return super.investmentId;
+	}
+
+	public void setStockId(Long stockId) {
+		super.investmentId = stockId;
+	}
+
+	public BigDecimal getSharePrice() {
+		return sharePrice;
+	}
+
+	public void setSharePrice(BigDecimal sharePrice) {
+		this.sharePrice = sharePrice;
+	}
+
+	public BigDecimal getQuantity() {
+		return quantity;
+	}
+
+	public void setQuantity(BigDecimal quantity) {
+		this.quantity = quantity;
+	}
+
+}
+
